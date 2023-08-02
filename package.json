@@ -9,13 +9,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/getintodevops/hellonode/"
+    "url": "git@github.com:vesaeskola/tstJenkins.git"
   },
   "keywords": [
     "node",
     "docker",
     "dockerfile"
   ],
-  "author": "miiro@getintodevops.com",
+  "author": "vesa.m.eskola@gmail.com",
   "license": "ISC"
 }
