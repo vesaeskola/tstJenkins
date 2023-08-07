@@ -18,15 +18,14 @@
 # Usage:
 #
 # 1) Create image:
-#    $ docker build . -t hello_web_server:1.0
-#    $ docker build -t hello_web_server:1.0 --build-arg GITUSERNAME="Vesa Eskola" --build-arg GITUSEREMAIL="vesa.m.eskola@gmail.com" .
+#    $ docker build -t hello_web_server:1.0 --build-arg GITUSERNAME="Vesa Eskola" --build-arg GITUSEREMAIL="vesa.m.eskola@gmail.com" --build-arg USERNAME="veskola" --tag hello_web_server .
 #
 # 2) Generate and run container:
 #  - Open port 8000 for container
 #  - bind folders: /home/vesaeskola/work2, ${SSH_AUTH_SOCK} (/run/user/1000/keyring/ssh)
 #  - set environment variables: SSH_AUTH_SOCK=/ssh.socket
 #
-#    $ docker run -it --rm -p 8000:8000 -v /home/vesaeskola/work2:/work2 -v ${SSH_AUTH_SOCK}:/ssh.socket -e SSH_AUTH_SOCK=/ssh.socket hello_web_server:1.0
+#    $ docker run -it --rm -p 8000:8000 -v /home/vesaeskola/work2:/work2 -v ${SSH_AUTH_SOCK}:/ssh.socket -e SSH_AUTH_SOCK=/ssh.socket hello_web_server
 #
 # 3) Test web server:
 #    $ curl http://127.0.0.1:8000
